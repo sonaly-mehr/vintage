@@ -1,7 +1,12 @@
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import { Montserrat } from 'next/font/google'
 import './globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={montserrat.className}>
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
     </html>
   )
 }
