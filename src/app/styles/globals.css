@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:focus {
+  outline: none;
+}
+.active {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  color: white;
+}
+.heading {
+  @apply font-bold text-[19px] leading-[30px] tracking-wider uppercase;
+}
+.width {
+  @apply md:w-3/4 m-auto px-4 md:px-0;
+}
+.bttn {
+  @apply uppercase font-bold text-xs tracking-widest leading-4 border-2 border-solid border-black py-1.5 px-6 flex gap-1 items-center rounded-md;
+}

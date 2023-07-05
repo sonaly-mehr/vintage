@@ -1,0 +1,24 @@
+.header__bg {
+  background: url("../../assets/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__bg {
+  background: url("../../assets/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.red_bg_opacity {
+  background: rgba(212, 4, 4, 0.8);
+}
+.dark_bg_opacity {
+  background: rgba(0, 0, 0, 0.8);
+}
+.white_bg_opacity {
+  background: rgba(255, 255, 255, 0.7);
+}
+.featured__bg {
+  background: url("../../assets/Kiemelt\ BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
