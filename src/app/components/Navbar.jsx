@@ -77,7 +77,7 @@ const Navbar = () => {
                       <div className="p-2 ">
                         <Menu.Item>
                           {({ active }) => (
-                            <Link href="/">
+                            <Link href="/instrument-categoris">
                               <button
                                 className={`${
                                   active

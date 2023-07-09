@@ -21,4 +21,85 @@
   background: url("../../assets/Kiemelt\ BG.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+.bttn_width button{
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.usedInstrument1{
+  background: url('../../assets/used-instrument1.svg');
+}
+.usedInstrument2{
+  background: url('../../assets/used-instrument2.svg');
+}
+.usedInstrument3{
+  background: url('../../assets/used-instrument3.svg');
+}
+.usedInstrument4{
+  background: url('../../assets/used-instrument4.svg');
+}
+.usedInstrument5{
+  background: url('../../assets/used-instrument5.svg');
+}
+.usedInstrument6{
+  background: url('../../assets/used-instrument6.svg');
+}
+.usedInstrument7{
+  background: url('../../assets/used-instrument7.svg');
+}
+.usedInstrument8{
+  background: url('../../assets/used-instrument8.svg');
+}
+.usedInstrument9{
+  background: url('../../assets/used-instrument9.svg');
+}
+.usedInstrument10{
+  background: url('../../assets/used-instrument10.svg');
+}
+.usedInstrument11{
+  background: url('../../assets/used-instrument11.svg');
+}
+.usedInstrument12{
+  background: url('../../assets/used-instrument12.svg');
+}
+.usedInstrument13{
+  background: url('../../assets/used-instrument13.svg');
+}
+.usedInstrument14{
+  background: url('../../assets/used-instrument14.svg');
+}
+.usedInstrument15{
+  background: url('../../assets/used-instrument15.svg');
+}
+.newInstrument1{
+  background: url('../../assets/new-instrument1.svg');
+}
+.newInstrument2{
+  background: url('../../assets/new-instrument2.svg');
+}
+.newInstrument3{
+  background: url('../../assets/new-instrument3.svg');
+}
+.newInstrument4{
+  background: url('../../assets/new-instrument4.svg');
+}
+.newInstrument5{
+  background: url('../../assets/new-instrument5.svg');
+}
+.newInstrument6{
+  background: url('../../assets/new-instrument6.svg');
+}
+.newInstrument7{
+  background: url('../../assets/new-instrument7.svg');
+}
+.newInstrument8{
+  background: url('../../assets/new-instrument8.svg');
+}
+
+.usedInstrument, .newInstrument{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

@@ -7,6 +7,7 @@ import news1 from "../../../assets/IMG.jpg";
 import news2 from "../../../assets/IMG(1).jpg";
 import news3 from "../../../assets/IMG(2).jpg";
 import Image from "next/image";
+import styles from '../../styles/index.module.css'
 
 const News = () => {
   const news = [
@@ -35,15 +36,15 @@ const News = () => {
     },
   ];
   return (
-    <div className="width pt-14 pb-28">
+    <div className="width pt-10 md:pt-14 pb-16 md:pb-28">
       <div className="flex justify-between items-center pb-10">
-        <h4 className="heading text-black">hírek</h4>
-        <Link href="/">
+        <h1 className="heading">hírek</h1>
+        <Link href="/" className="hidden md:block">
           <Button text="összes hír" icon={<BsArrowRightShort />} />
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-x-7">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-7 gap-y-10 md:gap-y-0">
         {news.map((news) => (
           <div className="">
             <Image
@@ -62,6 +63,13 @@ const News = () => {
           </div>
         ))}
       </div>
+
+      <Link
+          href="/"
+          className={`${styles.bttn_width} block md:hidden w-full mt-8`}
+        >
+          <Button text="összes hír" icon={<BsArrowRightShort />} />
+        </Link>
     </div>
   );
 };
