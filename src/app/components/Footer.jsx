@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
 
         <div>
-            <span className="text[#1D1D1B] body">1136 Bp., Balzac u. 54.</span>
+            <span className="text[#1D1D1B] body3">1136 Bp., Balzac u. 54.</span>
         </div>
       </div>
       </div>

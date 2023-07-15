@@ -5,6 +5,8 @@ import newsImg1 from "../../assets/IMG(1).jpg";
 import newsImg2 from "../../assets/Rectangle 168.jpg";
 import newsImg3 from "../../assets/Rectangle 169.jpg";
 import newsImg4 from "../../assets/Rectangle 170.jpg";
+import Image from "next/image";
+import { FaSquareFull } from 'react-icons/fa';
 
 const page = () => {
   const newsDetails = [
@@ -92,7 +94,7 @@ const page = () => {
     },
   ];
   return (
-    <div className="width">
+    <div className="width pb-40">
       <Link href="/news">
         <button className="bttn">
           <BsArrowLeftShort className="text-2xl" /> vissza
@@ -102,10 +104,39 @@ const page = () => {
       <h2 className="text-[17px] font-semibold leading-[25px] text-[#202020] my-6">
         A Hangszerész VIII. rész
       </h2>
-      <p className="body">
+      <p className="body3 w-4/5">
         A sorozat következő részében ismét egy gitárjavító műhelyt mutatok be, a
         Csambalik Tivadar nevével fémjelzett Vintage ’52 gitárszervízt.{" "}
       </p>
+
+      <div className="flex flex-col gap-10 w-3/5 m-auto py-12">
+        {
+          newsDetails.map((news)=> (
+            <div className="flex flex-col gap-10">
+              <Image src={news.img} alt="" className="w-full" priority/>
+              {
+                news.news.map((details)=> (
+                  <div className="flex flex-col gap-3">
+                  {details.heading? <h6 className="body1 flex gap-5"><FaSquareFull className="text-[10px] mt-1.5"/> {details.heading}</h6> : ""}
+                  <div className="flex flex-col gap-2">
+                  {details.descp1? <p className="body3">{details.descp1}</p> : ""}
+                  {details.descp2? <p className="body3">{details.descp2}</p> : ""}
+                  {details.descp3? <p className="body3">{details.descp3}</p> : ""}
+                  {details.descp4? <p className="body3">{details.descp4}</p> : ""}
+                  </div>
+                  </div>
+                ))
+              }
+            </div>
+          ))
+        }
+      </div>
+
+      <Link href="/news">
+        <button className="bttn">
+          <BsArrowLeftShort className="text-2xl" /> vissza
+        </button>
+      </Link>
     </div>
   );
 };

@@ -29,15 +29,15 @@ const page = () => {
               </div>
 
               <div className="flex flex-col gap-6">
-                <span className="body flex flex-col h-10">
+                <span className="body3 flex flex-col h-10">
                   Framus <span>FM-20SE MIJ</span>
                 </span>
-                <span className="body">170 000 Ft</span>
+                <span className="body3">170 000 Ft</span>
                 <div className="flex gap-3 items-center">
                   <button className="border-2 border-solid border-[#C4C4C4] p-1 rounded">
                     <MdKeyboardArrowDown className="text-[#C4C4C4]" />
                   </button>
-                  <span className="body">1 db</span>
+                  <span className="body3">1 db</span>
                   <button className="border-2 border-solid border-[#C4C4C4] p-1 rounded">
                     <MdKeyboardArrowUp className="text-[#C4C4C4]" />
                   </button>
