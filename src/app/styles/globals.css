@@ -10,6 +10,18 @@
   border-radius: 4px;
   color: white;
 }
+li{
+  list-style: none;
+}
+.sub-menu ul                 { transform: translatex(100%) scale(0) }
+.sub-menu:hover ul           { transform: translatex(101%) scale(1) }
+/* .sub-menu      { transform: rotate(-90deg) } */
+.sub-menu:hover > { transform: rotate(-270deg) }
+.bttn-width button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .heading {
   @apply font-bold text-xl md:text-[19px] leading-[30px] text-black md:text-[#202020] tracking-wider uppercase;
 }
@@ -36,4 +48,7 @@
 }
 .input {
   @apply border-2 border-solid border-black px-4 py-2 w-full rounded;
+}
+.navlink{
+  @apply font-bold text-xs uppercase text-[#CCCCCC]
 }

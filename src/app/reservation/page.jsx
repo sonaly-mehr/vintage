@@ -1,20 +1,25 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { BsArrowLeftShort } from "react-icons/bs";
 import Button from "../components/Button";
+import breadCrumbsData from "../data/breadCrumbs";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const page = () => {
+  const [breadCrumbs, setBreadCrumbs] = useState(breadCrumbsData.slice(0, 5));
   return (
-    <div div className="mb-24">
+    <div div className="mb-14 md:mb-24">
       <div className="width">
-        <h1 className="heading pt-10 pb-4">Foglalásod</h1>
+        <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <h1 className="heading pt-10 pb-5">Foglalásod</h1>
       </div>
 
       <div className="bg-[#F4F4F4F2] py-10">
-        <div className="width flex gap-28 justify-between">
+        <div className="width flex gap-20 md:gap-28 md:justify-between">
           <div>
-            <div className="basis-1/2 flex gap-32">
+            <div className="basis-1/2 flex gap-16 md:gap-32">
               <div className="flex flex-col gap-6">
                 <h6 className="text-[15px] font-bold leading-[23px] h-10">
                   Termék:
@@ -57,14 +62,38 @@ const page = () => {
                 </Link>{" "}
                 elolvastam és tudomásul veszem.
               </p>
-              <input type="checkbox" className="w-7 h-7" />
+              <input type="checkbox" className="w-10 h-10 md:w-7 md:h-7" />
             </div>
 
-            <div className="flex gap-10">
-              <Link href="/reservation-data">
+            <div className="md:hidden block cursor-pointer">
+              <select
+                id="options"
+                className="font-bold uppercase text-xs tracking-wider input bg-white"
+              >
+                <option selected>szállítási feltételek</option>
+                <option value="1" className="body5">
+                  Option 2
+                </option>
+                <option value="2" className="body5">
+                  Option 3
+                </option>
+                <option value="3" className="body5">
+                  Option 4
+                </option>
+                <option value="4" className="body5">
+                  Option 5
+                </option>
+              </select>
+            </div>
+
+            <div className="flex gap-10 w-full md:w-auto mt-6 text-center justify-center md:justify-normal">
+              <Link
+                href="/reservation-data"
+                className="w-full md:w-auto bttn-width"
+              >
                 <Button text="tovább a foglaláshoz" icon="" />
               </Link>
-              <Link href="/product-details">
+              <Link href="/product-details" className="hidden md:block">
                 <button className="bttn">
                   <BsArrowLeftShort className="text-2xl" /> vissza
                 </button>
@@ -72,7 +101,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="basis-1/2">
+          <div className="hidden md:block basis-1/2">
             <h6 className="text-[15px] font-semibold leading-[23px] mb-3">
               Szállítási feltételek
             </h6>
@@ -86,6 +115,15 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      <Link
+        href="/product-details"
+        className="block md:hidden width pt-5 md:pt-0"
+      >
+        <button className="bttn">
+          <BsArrowLeftShort className="text-2xl" /> vissza
+        </button>
+      </Link>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const ListInstruments = () => {
   const [instruments, setInstruments] = useState(instrumentData);
 
   return (
-    <div className="grid grid-cols-2 gap-y-3 gap-x-8">
+    <div className="grid md:grid-cols-2 gap-y-3 gap-x-8">
       {instruments.map((list) => (
         <div className="flex justify-between items-center border-b-[1px] border-solid border-[#B1B1B1] pb-3">
           <div>

@@ -11,7 +11,7 @@ const page = () => {
           <h6 className="text-[15px] font-semibold leading-[23px] mb-3">
             Szállítási feltételek
           </h6>
-          <p className="text-sm font-light leading-[21px] w-1/2">
+          <p className="text-sm font-light leading-[21px] md:w-1/2">
             A lentebb látható termék(eke)t sikeresen lefoglaltad. A foglalásról
             a megadott e-mail címre visszaigazolást küldünk. Amennyiben nem
             érkezett meg a visszaigazoló e-mail, kattints ide:
@@ -32,12 +32,14 @@ const page = () => {
       </div>
 
       <div className="width py-12">
-        <div className="flex gap-10 items-center">
-          <Link href="/checkout">
-            <button className="bttn">Kijelentkezés</button>
+        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center w-full">
+          <Link href="/checkout" className="w-full">
+            <button className="bttn w-full md:w-auto flex justify-center md:justify-start">
+              Kijelentkezés
+            </button>
           </Link>
-          <Link href="/">
-            <button className="bttn">
+          <Link href="/" className="w-full">
+            <button className="bttn w-full md:w-auto flex justify-center md:justify-start">
               <BsArrowLeftShort className="text-2xl" /> vissza a főoldalra
             </button>
           </Link>

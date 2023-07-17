@@ -1,0 +1,30 @@
+[
+    {
+        "nav": "rólunk",
+        "link": "/about-us"
+      },
+      {
+        "nav": "hírek",
+        "link": "/all-news"
+      },
+      {
+        "nav": "barátaink",
+        "link": "/our-friends"
+      },
+      {
+        "nav": "szervízünk",
+        "link": "/our-services"
+      },
+      {
+        "nav": "értékesítés",
+        "link": "/sale"
+      },
+      {
+        "nav": "szolgáltatások",
+        "link": "/services"
+      },
+      {
+        "nav": "ÁSZF",
+        "link": "/GTC"
+      }
+]

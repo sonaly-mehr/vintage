@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import Instruments from "../Instruments";
+import GridInstruments from "../GridInstruments";
 import Link from "next/link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsGrid, BsArrowRightShort } from "react-icons/bs";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import Button from "../Button";
-import ListInstruments from "./ListInstruments";
+import ListInstruments from "../ListInstruments";
 import styles from "../../styles/index.module.css";
 
 const LatestInstrument = () => {
@@ -56,7 +56,7 @@ const LatestInstrument = () => {
         </div>
       </div>
       <div className="width pt-8 md:pt-5 pb-16">
-        {gridView ? <Instruments /> : <ListInstruments />}
+        {gridView ? <GridInstruments /> : <ListInstruments />}
 
         <Link
           href="/"

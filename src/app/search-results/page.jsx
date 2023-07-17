@@ -6,16 +6,28 @@ import { BsGrid, BsArrowRightShort } from "react-icons/bs";
 import { AiOutlineUnorderedList } from "react-icons/ai";
 import Button from "../components/Button";
 import styles from "../styles/index.module.css";
-import Instruments from "../components/Instruments";
-import ListInstruments from "../components/home/ListInstruments";
+import Instruments from "../components/GridInstruments";
+import ListInstruments from "../components/ListInstruments";
 import PaginationButtons from "../components/pagination/PaginationButtons";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const page = () => {
   const [gridView, setGridView] = useState(true);
+  const breadCrumbs=[
+    {
+        name: "részletes keresés",
+    },
+    {
+        name: "találatok",
+        url: "/search-results"
+        
+    },
+  ]
   return (
     <div>
       <div className="width">
-        <h2 className="subHeading pt-4 md:pt-16 pb-4">A keresés eredménye:</h2>
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <h2 className="subHeading pt-4 md:pt-5 pb-4">A keresés eredménye:</h2>
       </div>
 
       <div className="bg-[#F7F7F7] py-3">

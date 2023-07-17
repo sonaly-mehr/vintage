@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 import polygon from "../../assets/Polygon 6.png";
 import instrumentData from "../data/data";
 
-const Instruments = () => {
+const GridInstruments = () => {
   const [instruments, setInstruments] = useState(instrumentData);
 
   return (
@@ -49,4 +49,4 @@ const Instruments = () => {
   );
 };
 
-export default Instruments;
+export default GridInstruments;

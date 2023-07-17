@@ -134,7 +134,7 @@ const page = () => {
         </h2>
 
         {/* Used-Instruments */}
-        <div className="grid grid-cols-6 gap-x-5 gap-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
           {usedInstruments.map(({ name, img, link }) => (
             <Link
               href={link}
@@ -152,7 +152,7 @@ const page = () => {
         Új hangszereink
         </h2>
 
-        <div className="grid grid-cols-6 gap-x-5 gap-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
           {newInstruments.map((instrument) => (
             <Link
               href={instrument.link}

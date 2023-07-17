@@ -7,6 +7,7 @@
   background: url("../../assets/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .red_bg_opacity {
   background: rgba(212, 4, 4, 0.8);
@@ -102,4 +103,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer__bg {
+    background: url("../../assets/responsive-footer-bg.jpg");
+  }
+  .header__bg {
+    background: url("../../assets/responsive-nav-bg.jpg");
+  }
 }

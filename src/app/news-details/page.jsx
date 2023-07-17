@@ -6,7 +6,7 @@ import newsImg2 from "../../assets/Rectangle 168.jpg";
 import newsImg3 from "../../assets/Rectangle 169.jpg";
 import newsImg4 from "../../assets/Rectangle 170.jpg";
 import Image from "next/image";
-import { FaSquareFull } from 'react-icons/fa';
+import { FaSquareFull } from "react-icons/fa";
 
 const page = () => {
   const newsDetails = [
@@ -95,7 +95,7 @@ const page = () => {
   ];
   return (
     <div className="width pb-40">
-      <Link href="/news">
+      <Link href="/news" className="mt-10 block">
         <button className="bttn">
           <BsArrowLeftShort className="text-2xl" /> vissza
         </button>
@@ -110,26 +110,45 @@ const page = () => {
       </p>
 
       <div className="flex flex-col gap-10 w-3/5 m-auto py-12">
-        {
-          newsDetails.map((news)=> (
-            <div className="flex flex-col gap-10">
-              <Image src={news.img} alt="" className="w-full" priority/>
-              {
-                news.news.map((details)=> (
-                  <div className="flex flex-col gap-3">
-                  {details.heading? <h6 className="body1 flex gap-5"><FaSquareFull className="text-[10px] mt-1.5"/> {details.heading}</h6> : ""}
-                  <div className="flex flex-col gap-2">
-                  {details.descp1? <p className="body3">{details.descp1}</p> : ""}
-                  {details.descp2? <p className="body3">{details.descp2}</p> : ""}
-                  {details.descp3? <p className="body3">{details.descp3}</p> : ""}
-                  {details.descp4? <p className="body3">{details.descp4}</p> : ""}
-                  </div>
-                  </div>
-                ))
-              }
-            </div>
-          ))
-        }
+        {newsDetails.map((news) => (
+          <div className="flex flex-col gap-10">
+            <Image src={news.img} alt="" className="w-full" priority />
+            {news.news.map((details) => (
+              <div className="flex flex-col gap-3">
+                {details.heading ? (
+                  <h6 className="body1 flex gap-5">
+                    <FaSquareFull className="text-[10px] mt-1.5" />{" "}
+                    {details.heading}
+                  </h6>
+                ) : (
+                  ""
+                )}
+                <div className="flex flex-col gap-2">
+                  {details.descp1 ? (
+                    <p className="body3">{details.descp1}</p>
+                  ) : (
+                    ""
+                  )}
+                  {details.descp2 ? (
+                    <p className="body3">{details.descp2}</p>
+                  ) : (
+                    ""
+                  )}
+                  {details.descp3 ? (
+                    <p className="body3">{details.descp3}</p>
+                  ) : (
+                    ""
+                  )}
+                  {details.descp4 ? (
+                    <p className="body3">{details.descp4}</p>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
 
       <Link href="/news">

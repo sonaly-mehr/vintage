@@ -1,14 +1,19 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import Reservation from "../components/Reservation";
 import Login from "../components/auth/Login";
 import SignUp from "../components/auth/SignUp";
 import Link from "next/link";
 import { BsArrowLeftShort } from "react-icons/bs";
+import BreadCrumbs from "../components/BreadCrumbs";
+import breadCrumbsData from "../data/breadCrumbs";
 
 const page = () => {
+  const [breadCrumbs, setBreadCrumbs] = useState(breadCrumbsData.slice(0, 5));
   return (
     <div>
       <div className="width">
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
         <h1 className="heading pt-10 pb-4">Foglalásod</h1>
       </div>
 
@@ -19,7 +24,7 @@ const page = () => {
       </div>
 
       <div className="width py-16">
-        <div className="flex justify-between gap-52">
+        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-52">
           <div className="basis-1/2">
             <h4 className="font-semibold text-base mb-5">
               Ha már rendeltél nálunk:
@@ -38,7 +43,7 @@ const page = () => {
           </div>
         </div>
 
-        <Link href="/reservation">
+        <Link href="/reservation" className="pt-8 md:pt-0 block">
           <button className="bttn">
             <BsArrowLeftShort className="text-2xl" /> vissza
           </button>
