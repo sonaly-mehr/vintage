@@ -1,6 +1,11 @@
+"use client";
 import React from "react";
+import { BsArrowUp } from "react-icons/bs";
 
 const page = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
   const introductory = [
     {
       num: "1.",
@@ -203,10 +208,10 @@ const page = () => {
     },
   ];
   return (
-    <div className="width pt-16 pb-60">
+    <div className="width pt-10 md:pt-16 pb-20 md:pb-60">
       <h1 className="heading mb-8">ÁSZF</h1>
 
-      <div className="w-3/5 m-auto flex flex-col gap-6 text-[15px] leading-[22px]">
+      <div className="md:w-3/5 m-auto flex flex-col gap-3 md:gap-6 text-[15px] leading-[22px]">
         <p>
           1074 Bp. Munkás u. 7/B, adószám: 22726506-2-42, a továbbiakban: ANSR
           Kft.) által kötött adásvételi szerződésekhez.{" "}
@@ -216,13 +221,26 @@ const page = () => {
         <div className="flex flex-col gap-6">
           {introductory.map((intro) => (
             <div className="flex gap-1">
-              <span className="text-[15px] leading-[22px] font-semibold text-primary">{intro.num}</span>
-              <p>{intro.descp}</p>
+              <p>
+                <span className="text-[15px] leading-[22px] font-semibold text-primary">
+                  {intro.num}
+                </span>{" "}
+                {intro.descp}
+              </p>
             </div>
           ))}
         </div>
 
-        <p >Budapest, 2009. november 10. <br /> ANSR Kft.A </p>
+        <p>
+          Budapest, 2009. november 10. <br /> ANSR Kft.A{" "}
+        </p>
+
+        <button
+          className="bttn flex md:hidden w-full justify-center mt-4"
+          onClick={scrollToTop}
+        >
+          vissza az oldal tetejére <BsArrowUp className="text-2xl" />
+        </button>
       </div>
     </div>
   );

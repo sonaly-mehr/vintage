@@ -9,18 +9,16 @@ import breadCrumbsData from "../data/breadCrumbs";
 import BreadCrumbs from "../components/BreadCrumbs";
 
 const page = () => {
-  const [breadCrumbs, setBreadCrumbs] = useState(breadCrumbsData.slice(0, 4))
+  const [breadCrumbs, setBreadCrumbs] = useState(breadCrumbsData.slice(0, 4));
   return (
     <div className="width pb-12">
-            <BreadCrumbs breadCrumbs={breadCrumbs} />
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
       <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-28 justify-between mt-5">
         <div>
-        <div className="mb-7 md:mb-12">
-        <h1 className="heading md:text-[#202020]">
-          applause by ovation
-        </h1>
-        <h2 className="subHeading mt-3">AE 127</h2>
-      </div>
+          <div className="mb-7 md:mb-12">
+            <h1 className="heading md:text-[#202020]">applause by ovation</h1>
+            <h2 className="subHeading mt-3">AE 127</h2>
+          </div>
           <div className="basis-1/2 flex gap-10 md:gap-32">
             <div className="flex flex-col gap-2.5">
               <h6 className="text-[15px] font-semibold leading-[23px]">

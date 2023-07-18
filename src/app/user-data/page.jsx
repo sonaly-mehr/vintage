@@ -8,7 +8,7 @@ const page = () => {
       <div className="width">
         <h1 className="heading pt-10 pb-4">Adataim</h1>
 
-        <form action="" className="w-3/5 m-auto">
+        <form action="" className="md:w-3/5 m-auto">
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <label htmlFor="" className="body2 text-[#20102B]">
@@ -91,12 +91,12 @@ const page = () => {
           </div>
 
           <div className="mt-10 flex gap-6">
-            <Link href="/reservation-logged-in">
-              <Button text="regisztráció" />
+            <Link href="/">
+              <Button text="mentés" />
             </Link>
 
-            <Link href="/reservation">
-              <button className="bttn">Kijelentkezés</button>
+            <Link href="/user-product">
+              <button className="bttn">vissza</button>
             </Link>
           </div>
         </form>

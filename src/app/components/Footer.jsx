@@ -81,7 +81,7 @@ const Footer = () => {
           </div>
 
           <div>
-          <h6 className="font-semibold text-[15px] leading-[23px] text-primary mt-3 md:mt-0">
+            <h6 className="font-semibold text-[15px] leading-[23px] text-primary mt-3 md:mt-0">
               2023{" "}
             </h6>
           </div>

@@ -20,7 +20,7 @@ const Login = () => {
           </div>
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="body2 text-[#20102B]">
-            Jelszó
+              Jelszó
             </label>
             <input type="text" placeholder="Jelszó" className="body2 input" />
           </div>

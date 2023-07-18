@@ -13,20 +13,19 @@ import BreadCrumbs from "../components/BreadCrumbs";
 
 const page = () => {
   const [gridView, setGridView] = useState(true);
-  const breadCrumbs=[
+  const breadCrumbs = [
     {
-        name: "részletes keresés",
+      name: "részletes keresés",
     },
     {
-        name: "találatok",
-        url: "/search-results"
-        
+      name: "találatok",
+      url: "/search-results",
     },
-  ]
+  ];
   return (
     <div>
       <div className="width">
-      <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <BreadCrumbs breadCrumbs={breadCrumbs} />
         <h2 className="subHeading pt-4 md:pt-5 pb-4">A keresés eredménye:</h2>
       </div>
 

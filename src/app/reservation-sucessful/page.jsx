@@ -32,13 +32,13 @@ const page = () => {
       </div>
 
       <div className="width py-12">
-        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center w-full">
-          <Link href="/checkout" className="w-full">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-center">
+          <Link href="/checkout" className="w-full md:w-auto">
             <button className="bttn w-full md:w-auto flex justify-center md:justify-start">
               Kijelentkezés
             </button>
           </Link>
-          <Link href="/" className="w-full">
+          <Link href="/" className="w-full md:w-auto">
             <button className="bttn w-full md:w-auto flex justify-center md:justify-start">
               <BsArrowLeftShort className="text-2xl" /> vissza a főoldalra
             </button>

@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import img1 from "../../assets/sale3.jpg";
 import img2 from "../../assets/sale4.jpg";
 import img3 from "../../assets/sale5.jpg";
 import img4 from "../../assets/sale6.jpg";
 import Image from "next/image";
+import PaginationButtons from "../components/pagination/PaginationButtons";
 
 const page = () => {
   const references = [
@@ -44,18 +46,24 @@ const page = () => {
     },
   ];
   return (
-    <div className="width pt-16 pb-60">
+    <div className="width md:pt-16 pb-20 md:pb-60">
       <h1 className="heading mb-8">referenciák</h1>
 
-      <div className="w-3/5 m-auto">
-      <div className="flex flex-col gap-14">
-        {references.map((reference) => (
-          <div className="border-b-[1px] border-solid border-[#B1B1B1]">
-            <Image src={reference.img} alt="" priority className="w-full" />
-            <p className="body3 my-8">{reference.descp}</p>
-          </div>
-        ))}
-      </div>
+      <div className="md:w-3/5 m-auto">
+        <div className="flex justify-center mt-5">
+          <PaginationButtons />
+        </div>
+        <div className="flex flex-col gap-8 md:gap-14">
+          {references.map((reference) => (
+            <div className="border-b-[1px] border-solid border-[#B1B1B1]">
+              <Image src={reference.img} alt="" priority className="w-full" />
+              <p className="body3 my-5 md:my-8">{reference.descp}</p>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mb-5">
+          <PaginationButtons />
+        </div>
       </div>
     </div>
   );

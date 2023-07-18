@@ -1,8 +1,6 @@
 import React from "react";
 import Reservation from "../components/Reservation";
 import Link from "next/link";
-import Button from "../components/Button";
-import { BsArrowLeftShort } from "react-icons/bs";
 import Image from "next/image";
 import user from "../../assets/user-icon.svg";
 
@@ -10,8 +8,8 @@ const page = () => {
   return (
     <div className="mb-20">
       <div className="width">
-        <h1 className="heading pt-10 pb-4">felhasználó</h1>
-        <div className="flex gap-10 mt-5 mb-8">
+        <h1 className="heading pt-10 pb-4 hidden md:block">felhasználó</h1>
+        <div className="flex gap-6 md:gap-10 mt-5 mb-8">
           <Image src={user} alt="" priority />
           <div>
             <h1 className="heading">nagy Attila</h1>
@@ -34,15 +32,19 @@ const page = () => {
         </div>
       </div>
 
-      <div className="width flex gap-6 pt-8 pb-6">
-          <Link href="/reservation">
-            <button className="bttn">tovább a főoldalra</button>
-          </Link>
+      <div className="width flex flex-col md:flex-row gap-6 pt-5 md:pt-8">
+        <Link href="/user-product" className="w-full md:w-auto">
+          <button className="bttn flex md:block justify-center w-full md:w-auto">
+            tovább a főoldalra
+          </button>
+        </Link>
 
-          <Link href="/reservation">
-            <button className="bttn">Kijelentkezés</button>
-          </Link>
-        </div>
+        <Link href="/checkout" className="w-full md:w-auto">
+          <button className="bttn flex md:block justify-center w-full md:w-auto">
+            Kijelentkezés
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };

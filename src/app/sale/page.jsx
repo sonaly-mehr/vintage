@@ -32,14 +32,14 @@ const page = () => {
     },
   ];
   return (
-    <div className="width pt-16 pb-60">
+    <div className="width pt-10 md:pt-16 pb-20 md:pb-60">
       <h1 className="heading mb-8">értékesítés</h1>
-      <div className="w-1/2 m-auto">
+      <div className="md:w-1/2 m-auto">
       <Image src={sale1} alt="" priority className="w-full mb-6"/>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3 md:gap-6">
         {salesDetails.map((sale) => (
-          <div className="body3 flex flex-col gap-6">
+          <div className="body3 flex flex-col gap-3 md:gap-6">
             <p>{sale.heading}</p>
             <ul className="ml-10">
                 {
@@ -52,7 +52,7 @@ const page = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-3 md:gap-5 mt-3 md:mt-0">
       <Image src={sale2} alt="" priority className="w-full col-span-2"/>
       <Image src={sale3} alt="" priority className="w-full"/>
       <Image src={sale4} alt="" priority className="w-full"/>

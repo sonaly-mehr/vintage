@@ -6,10 +6,10 @@ const page = () => {
   return (
     <>
       <div className="width">
-        <h1 className="heading py-10">részletes kereső</h1>
+        <h1 className="heading py-6 md:py-10">részletes kereső</h1>
       </div>
-      <form action="" className="bg-[#F4F4F4] py-12 mb-20">
-        <div className="flex flex-col gap-4 w-2/5 m-auto">
+      <form action="" className="bg-[#F4F4F4] py-8 md:py-12 mb-20">
+        <div className="flex flex-col gap-4 width md:w-2/5 m-auto">
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="body2 text-[#20102B]">
               Leírás
@@ -71,10 +71,18 @@ const page = () => {
             </label>
             <select id="options" className="body5 input bg-white">
               <option selected>Mindegy</option>
-              <option value="1" className="body5">Option 2</option>
-              <option value="2" className="body5">Option 3</option>
-              <option value="3" className="body5">Option 4</option>
-              <option value="4" className="body5">Option 5</option>
+              <option value="1" className="body5">
+                Option 2
+              </option>
+              <option value="2" className="body5">
+                Option 3
+              </option>
+              <option value="3" className="body5">
+                Option 4
+              </option>
+              <option value="4" className="body5">
+                Option 5
+              </option>
             </select>
           </div>
 
@@ -106,7 +114,10 @@ const page = () => {
           </div>
 
           <div className="mt-8">
-            <Link href="/reservation-logged-in">
+            <Link
+              href="/reservation-logged-in"
+              className="w-full md:w-auto bttn-width"
+            >
               <Button text="Keresés" />
             </Link>
           </div>

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import friend from "../../assets/friend1.jpg";
 import Image from "next/image";
@@ -8,8 +8,8 @@ const page = () => {
   const friends = [
     {
       img: friend,
-      boldDescp: "Mikuszkaaaaaa,",
-      descp: "aki Ré tulajdonos",
+      boldDescp: "Godzilla,",
+      descp: "aki a legcsúnyább bringás a világon",
     },
     {
       img: friend,
@@ -89,14 +89,14 @@ const page = () => {
     <div className="width pt-16 pb-28">
       <h1 className="heading">hírek</h1>
 
-        <div className="flex justify-center mb-5">
-          <PaginationButtons />
-        </div>
-      <div className="grid grid-cols-4 gap-x-5 gap-y-14">
+      <div className="flex justify-center mb-5">
+        <PaginationButtons />
+      </div>
+      <div className="flex flex-col gap-5 md:flex-row flex-wrap flex-none overflow-auto">
         {friends.map((friend) => (
-          <div className="border-b-[1px] border-solid border-[#B1B1B1] pb-10 h-fit">
-            <Image src={friend.img} alt="" priority />
-            <p className="body3 mt-2">
+          <div className="basis-[23%] border-b-[1px] border-solid border-[#B1B1B1] pb-4 md:pb-10 h-fit">
+            <Image src={friend.img} alt="" priority className="w-full" />
+            <p className="body3 mt-2 h-full py-3 md:py-0">
               <span className="font-semibold text-primary">
                 {friend.boldDescp}
               </span>{" "}
@@ -106,8 +106,8 @@ const page = () => {
         ))}
       </div>
       <div className="flex justify-center mt-3 mb-5">
-          <PaginationButtons />
-        </div>
+        <PaginationButtons />
+      </div>
     </div>
   );
 };

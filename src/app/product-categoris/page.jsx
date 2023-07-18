@@ -126,12 +126,8 @@ const page = () => {
   return (
     <>
       <div className="width ">
-        <h1 className="heading pt-4 md:pt-16 pb-4">
-          Termékkategóriák
-        </h1>
-        <h2 className="subHeading pt-2 pb-7">
-          Használt hangszereink
-        </h2>
+        <h1 className="heading pt-4 md:pt-16 pb-4">Termékkategóriák</h1>
+        <h2 className="subHeading pt-2 pb-7">Használt hangszereink</h2>
 
         {/* Used-Instruments */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
@@ -148,15 +144,15 @@ const page = () => {
         </div>
 
         {/* New-Instruments */}
-        <h2 className="subHeading py-8 pb-3">
-        Új hangszereink
-        </h2>
+        <h2 className="subHeading py-8 pb-3">Új hangszereink</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
           {newInstruments.map((instrument) => (
             <Link
               href={instrument.link}
-              className={`${styles[instrument.img]} ${styles.newInstrument} w-full h-full text-center flex items-center`}
+              className={`${styles[instrument.img]} ${
+                styles.newInstrument
+              } w-full h-full text-center flex items-center`}
             >
               <button className="font-bold text-xs tracking-widest flex justify-center py-1 px-4 uppercase text-white w-full">
                 {instrument.name}

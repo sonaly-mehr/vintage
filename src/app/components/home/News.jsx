@@ -7,7 +7,7 @@ import news1 from "../../../assets/IMG.jpg";
 import news2 from "../../../assets/IMG(1).jpg";
 import news3 from "../../../assets/IMG(2).jpg";
 import Image from "next/image";
-import styles from '../../styles/index.module.css'
+import styles from "../../styles/index.module.css";
 
 const News = () => {
   const news = [
@@ -24,7 +24,7 @@ const News = () => {
       descp:
         "“A sorozat következő részében ismét egy gitárjavító műhelyt mutatok be, a Csambalik Tivadar nevével fémjelzett Vintage ’52 gitárszervízt.”",
       date: "2022. 09. 17",
-      link: "/"
+      link: "/",
     },
     {
       img: news3,
@@ -32,7 +32,7 @@ const News = () => {
       descp:
         "Február 22-én mindent megtudhatsz képzéseinkről, az oktatás menetéről, a hangszerészképzés elméleti és gyakorlati oldaláról.",
       date: "2022. 09. 17",
-      link:"/"
+      link: "/",
     },
   ];
   return (
@@ -54,22 +54,34 @@ const News = () => {
               unoptimized={true}
               className="w-full"
             />
-            <span className="flex justify-end text-xs tracking-wider text-black pt-2">{news.date}</span>
-            <h6 className="font-semibold text-[17px] leading-[25px] text-[#081F32]">{news.heading}</h6>
-            <p className="text-[15px] font-light leading-[22px] text-[#374A59] pt-2 pb-4">{news.descp}</p>
-            {
-                news.link? <Link href={news.link}><button className="bttn">elolvasom <FiArrowRight className="text-xl"/></button></Link> : ""
-            }
+            <span className="flex justify-end text-xs tracking-wider text-black pt-2">
+              {news.date}
+            </span>
+            <h6 className="font-semibold text-[17px] leading-[25px] text-[#081F32]">
+              {news.heading}
+            </h6>
+            <p className="text-[15px] font-light leading-[22px] text-[#374A59] pt-2 pb-4">
+              {news.descp}
+            </p>
+            {news.link ? (
+              <Link href={news.link}>
+                <button className="bttn">
+                  elolvasom <FiArrowRight className="text-xl" />
+                </button>
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         ))}
       </div>
 
       <Link
-          href="/"
-          className={`${styles.bttn_width} block md:hidden w-full mt-8`}
-        >
-          <Button text="összes hír" icon={<BsArrowRightShort />} />
-        </Link>
+        href="/"
+        className={`${styles.bttn_width} block md:hidden w-full mt-8`}
+      >
+        <Button text="összes hír" icon={<BsArrowRightShort />} />
+      </Link>
     </div>
   );
 };

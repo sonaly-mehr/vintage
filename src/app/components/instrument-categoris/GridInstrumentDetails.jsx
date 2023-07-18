@@ -32,9 +32,7 @@ const GridInstrumentDetails = () => {
           <h6 className="font-semibold text-[15px] leading-[23px] my-3">
             {instrument.name}
           </h6>
-          <span className="body3 block h-[40px]">
-            {instrument.type}
-          </span>
+          <span className="body3 block h-[40px]">{instrument.type}</span>
           <p className="font-normal text-[15px] leading-[22px] italic h-[110px]">
             {instrument.descp}
           </p>

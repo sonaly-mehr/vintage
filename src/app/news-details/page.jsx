@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { BsArrowLeftShort } from "react-icons/bs";
 import newsImg1 from "../../assets/IMG(1).jpg";
 import newsImg2 from "../../assets/Rectangle 168.jpg";
@@ -7,8 +8,18 @@ import newsImg3 from "../../assets/Rectangle 169.jpg";
 import newsImg4 from "../../assets/Rectangle 170.jpg";
 import Image from "next/image";
 import { FaSquareFull } from "react-icons/fa";
+import BreadCrumbs from "../components/BreadCrumbs";
 
 const page = () => {
+  const breadCrumbs = [
+    {
+      name: "hírek",
+    },
+    {
+      name: "A Hangszerész VIII. rész",
+      url: "/news-details",
+    },
+  ];
   const newsDetails = [
     {
       img: newsImg1,
@@ -94,14 +105,15 @@ const page = () => {
     },
   ];
   return (
-    <div className="width pb-40">
-      <Link href="/news" className="mt-10 block">
+    <div className="width pb-20 md:pb-40">
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
+      <Link href="/news" className="md:mt-6 block">
         <button className="bttn">
           <BsArrowLeftShort className="text-2xl" /> vissza
         </button>
       </Link>
 
-      <h2 className="text-[17px] font-semibold leading-[25px] text-[#202020] my-6">
+      <h2 className="text-[17px] font-semibold leading-[25px] text-[#202020] my-7">
         A Hangszerész VIII. rész
       </h2>
       <p className="body3 w-4/5">
@@ -109,7 +121,7 @@ const page = () => {
         Csambalik Tivadar nevével fémjelzett Vintage ’52 gitárszervízt.{" "}
       </p>
 
-      <div className="flex flex-col gap-10 w-3/5 m-auto py-12">
+      <div className="flex flex-col gap-6 md:gap-10 md:w-3/5 m-auto py-12">
         {newsDetails.map((news) => (
           <div className="flex flex-col gap-10">
             <Image src={news.img} alt="" className="w-full" priority />
@@ -123,7 +135,7 @@ const page = () => {
                 ) : (
                   ""
                 )}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 ml-5">
                   {details.descp1 ? (
                     <p className="body3">{details.descp1}</p>
                   ) : (

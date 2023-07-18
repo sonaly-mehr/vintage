@@ -42,7 +42,7 @@ const SignUp = () => {
 
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="body2 text-[#20102B]">
-            Személyi szám
+              Személyi szám
             </label>
             <input
               type="text"
@@ -53,7 +53,7 @@ const SignUp = () => {
 
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="body2 text-[#20102B]">
-            Cím
+              Cím
             </label>
             <textarea
               name=""

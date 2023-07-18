@@ -14,7 +14,6 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import Nav from "./Nav";
 
 const Navbar = () => {
-
   const info = [
     {
       icon: <HiOutlineLocationMarker />,

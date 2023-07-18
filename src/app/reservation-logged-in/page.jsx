@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Reservation from "../components/Reservation";
 import Link from "next/link";
 import Button from "../components/Button";
 import { BsArrowLeftShort } from "react-icons/bs";
 import Image from "next/image";
-import user from '../../assets/user-icon.svg'
+import user from "../../assets/user-icon.svg";
 import breadCrumbsData from "../data/breadCrumbs";
 import BreadCrumbs from "../components/BreadCrumbs";
 
@@ -14,16 +14,18 @@ const page = () => {
   return (
     <div className="mb-20">
       <div className="width">
-      <BreadCrumbs breadCrumbs={breadCrumbs} />
-      <div className="flex flex-col-reverse md:flex-col">
-        <div className="flex gap-5 md:gap-16 mt-5 mb-5 md:mb-0">
-            <Image src={user} alt="" priority/>
+        <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <div className="flex flex-col-reverse md:flex-col">
+          <div className="flex gap-5 md:gap-16 mt-5 mb-5 md:mb-0">
+            <Image src={user} alt="" priority />
             <div>
-                <h1 className="heading">nagy Attila</h1>
-                <h4 className="font-semibold text-base">attila.nagy.88@gmail.com</h4>
+              <h1 className="heading">nagy Attila</h1>
+              <h4 className="font-semibold text-base">
+                attila.nagy.88@gmail.com
+              </h4>
             </div>
-        </div>
-        <h1 className="heading pt-5 md:pt-10 md:pb-4">Foglalásod</h1>
+          </div>
+          <h1 className="heading pt-5 md:pt-10 md:pb-4">Foglalásod</h1>
         </div>
       </div>
 

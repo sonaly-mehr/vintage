@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Reservation from "../components/Reservation";
 import Login from "../components/auth/Login";
@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div>
       <div className="width">
-      <BreadCrumbs breadCrumbs={breadCrumbs} />
+        <BreadCrumbs breadCrumbs={breadCrumbs} />
         <h1 className="heading pt-10 pb-4">Foglalásod</h1>
       </div>
 

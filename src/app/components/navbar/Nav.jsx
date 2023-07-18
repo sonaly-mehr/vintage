@@ -195,7 +195,11 @@ const Nav = () => {
             <Link
               href="/detailed-search"
               className={`${
-                pathname === "/search-no-results" || pathname === "/detailed-search" || pathname === "/search-results" ? "active" : ""
+                pathname === "/search-no-results" ||
+                pathname === "/detailed-search" ||
+                pathname === "/search-results"
+                  ? "active"
+                  : ""
               } py-2.5 px-4 block`}
             >
               részletes kereső
