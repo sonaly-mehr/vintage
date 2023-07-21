@@ -10,6 +10,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ResponsiveNav from "./ResponsiveNav";
 import használtNavLinks from "../../data/használtNavLinks.json";
 import információkNavLinks from "../../data/információkNavLinks.json";
+import styles from '../../styles/index.module.css'
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -24,13 +25,13 @@ const Nav = () => {
   return (
     <div>
       <div>
-        <ul className="hidden md:flex md:gap-7 font-bold text-xs uppercase items-center text-[#CCCCCC]">
+        <ul className="hidden md:flex md:gap-0 lg:gap-7 font-bold md:text-[11px] lg:text-xs uppercase items-center text-[#CCCCCC]">
           <li>
             <Link
               href="/"
               className={`${
                 pathname === "/" ? "active" : ""
-              } py-2.5 px-4 block`}
+              } py-2.5 px-2 lg:px-4 block`}
             >
               kezdőlap
             </Link>
@@ -48,14 +49,14 @@ const Nav = () => {
               pathname === "/checkout"
                 ? "active"
                 : ""
-            } py-1 px-4 block`}
+            } py-1 px-3 lg:px-4 block`}
           >
             <Menu as="div" className="relative inline-block text-left">
               <Menu.Button
-                className={`flex items-center w-full justify-between rounded hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold text-xs uppercase `}
+                className={`flex items-center w-full justify-between rounded hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold md:text-[11px] lg:text-xs uppercase `}
               >
                 Hangszereink
-                <MdKeyboardArrowDown className=" text-3xl" />
+                <MdKeyboardArrowDown className=" md:text-xl lg:text-3xl" />
               </Menu.Button>
               <Transition
                 as={Fragment}
@@ -71,7 +72,7 @@ const Nav = () => {
                   className="absolute right-0 mt-2 w-36 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none border-2 border-solid border-[#D6D6D6]"
                 >
                   <div className="p-2 ">
-                    <div className="relative sub-menu">
+                    <div className={`relative ${styles.sub__menu}`}>
                       <Menu.Item as="div">
                         {({ active }) => (
                           <Link href="/instrument-categoris">
@@ -80,7 +81,7 @@ const Nav = () => {
                                 active
                                   ? "text-white bg-[#3F3F3F]"
                                   : "text-gray-900"
-                              } group flex w-full items-center rounded px-3 py-2 text-xs uppercase font-bold tracking-wider`}
+                              } group flex w-full items-center rounded px-3 py-2 md:text-[11px] lg:text-xs uppercase font-bold tracking-wider`}
                             >
                               használt
                             </button>
@@ -98,7 +99,7 @@ const Nav = () => {
                                     active
                                       ? "text-white bg-[#3F3F3F]"
                                       : "text-gray-900"
-                                  } group flex w-full items-center rounded p-3 text-xs uppercase font-bold tracking-wider`}
+                                  } group flex w-full items-center rounded p-3 md:text-[11px] lg:text-xs uppercase font-bold tracking-wider`}
                                 >
                                   {menu.nav}
                                 </button>
@@ -117,7 +118,7 @@ const Nav = () => {
                               active
                                 ? "text-white bg-[#3F3F3F]"
                                 : "text-gray-900"
-                            } group flex w-full items-center rounded px-3 py-2 text-xs uppercase font-bold tracking-wider`}
+                            } group flex w-full items-center rounded px-3 py-2 md:text-[11px] lg:text-xs uppercase font-bold tracking-wider`}
                           >
                             új
                           </button>
@@ -147,11 +148,11 @@ const Nav = () => {
           >
             <Menu
               as="div"
-              className="relative inline-block text-left py-1 px-4"
+              className="relative inline-block text-left py-1 md:px-0 lg:px-4"
             >
-              <Menu.Button className="flex items-center w-full justify-center rounded hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold text-xs uppercase">
+              <Menu.Button className="flex items-center w-full justify-center rounded hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 font-bold md:text-[11px] lg:text-xs uppercase">
                 információk
-                <MdKeyboardArrowDown className=" text-3xl" />
+                <MdKeyboardArrowDown className=" md:text-xl lg:text-3xl" />
               </Menu.Button>
               <Transition
                 as={Fragment}
@@ -173,7 +174,7 @@ const Nav = () => {
                                 active
                                   ? "text-white bg-[#3F3F3F]"
                                   : "text-gray-900"
-                              } group flex w-full items-center rounded px-3 py-2 text-xs uppercase font-bold tracking-wider`}
+                              } group flex w-full items-center rounded px-3 py-2 md:text-[11px] lg:text-xs uppercase font-bold tracking-wider`}
                             >
                               {menu.nav}
                             </button>
@@ -186,7 +187,7 @@ const Nav = () => {
               </Transition>
             </Menu>
           </li>
-          <li>
+          <li className="md:hidden lg:hidden xl:block">
             <Link href="/">
               <Image src={logo} alt="" className="" priority />
             </Link>
@@ -200,7 +201,7 @@ const Nav = () => {
                 pathname === "/search-results"
                   ? "active"
                   : ""
-              } py-2.5 px-4 block`}
+              } py-2.5 md:px-3 lg:px-4 block`}
             >
               részletes kereső
             </Link>
@@ -210,7 +211,7 @@ const Nav = () => {
         {/* Hamburger Icon */}
         <div
           onClick={handleNav}
-          className="flex justify-between items-center md:hidden w-[220px]"
+          className="flex justify-between items-center md:hidden w-[200px]"
         >
           <AiOutlineMenu className="cursor-pointer mr-6" size={40} />
 

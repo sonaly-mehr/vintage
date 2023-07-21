@@ -10,7 +10,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className={`${styles.footer__bg}`}>
-      <div className="width flex flex-col md:flex-row gap-7 md:gap-0 justify-between text-white py-12">
+      <div className="width flex flex-col md:flex-row gap-7 md:gap-7 lg:gap-0 justify-between md:justify-normal lg:justify-between text-white py-12">
         <div>
           <h6 className="font-semibold text-base mb-3 md:mb-6">
             Nyitvatartás:

@@ -130,13 +130,13 @@ const page = () => {
         <h2 className="subHeading pt-2 pb-7">Használt hangszereink</h2>
 
         {/* Used-Instruments */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-5 gap-y-3">
           {usedInstruments.map(({ name, img, link }) => (
             <Link
               href={link}
-              className={`${styles[img]} ${styles.usedInstrument} w-full text-center flex items-center`}
+              className={`${styles[img]} ${styles.usedInstrument} w-full text-center flex items-center rounded-lg h-12`}
             >
-              <button className="font-bold text-xs tracking-widest flex justify-center py-1 px-4 uppercase text-white w-full">
+              <button className="font-bold text-xs tracking-widest flex justify-center px-4 uppercase text-white w-full">
                 {name}
               </button>
             </Link>
@@ -146,13 +146,13 @@ const page = () => {
         {/* New-Instruments */}
         <h2 className="subHeading py-8 pb-3">Új hangszereink</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-x-5 gap-y-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-5 gap-y-3">
           {newInstruments.map((instrument) => (
             <Link
               href={instrument.link}
               className={`${styles[instrument.img]} ${
                 styles.newInstrument
-              } w-full h-full text-center flex items-center`}
+              } w-full text-center flex items-center rounded-lg h-12`}
             >
               <button className="font-bold text-xs tracking-widest flex justify-center py-1 px-4 uppercase text-white w-full">
                 {instrument.name}

@@ -9,7 +9,7 @@ const page = () => {
         <h1 className="heading py-6 md:py-10">részletes kereső</h1>
       </div>
       <form action="" className="bg-[#F4F4F4] py-8 md:py-12 mb-20">
-        <div className="flex flex-col gap-4 width md:w-2/5 m-auto">
+        <div className="flex flex-col gap-4 width md:w-1/2 lg:w-2/5 m-auto">
           <div className="flex flex-col gap-1">
             <label htmlFor="" className="body2 text-[#20102B]">
               Leírás
@@ -69,7 +69,7 @@ const page = () => {
             <label htmlFor="" className="body2 text-[#20102B]">
               Állapot
             </label>
-            <select id="options" className="body5 input bg-white">
+            <select id="options" className="body5 input bg-white cursor-pointer ">
               <option selected>Mindegy</option>
               <option value="1" className="body5">
                 Option 2

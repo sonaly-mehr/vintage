@@ -92,7 +92,7 @@ const page = () => {
       <div className="flex justify-center mb-5">
         <PaginationButtons />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-7 gap-y-8 md:gap-y-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-8 md:gap-y-16">
         {news.map((news) => (
           <div className="">
             <Image

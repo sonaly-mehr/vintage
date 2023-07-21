@@ -10,6 +10,7 @@ import PaginationButtons from "../components/pagination/PaginationButtons";
 import BreadCrumbs from "../components/BreadCrumbs";
 import breadCrumbsData from "../data/breadCrumbs";
 import Tabs from "../components/instrument-categoris/Tabs";
+import OrderDropdown from "../components/OrderDropdown";
 
 const page = () => {
   const [gridView, setGridView] = useState(true);
@@ -20,7 +21,7 @@ const page = () => {
     <div>
       <div className="width">
         <BreadCrumbs breadCrumbs={breadCrumbs} />
-        <h1 className="heading pt-4 md:pt-5 pb-48 md:pb-24">
+        <h1 className="heading pt-4 md:pt-5 pb-64 md:pb-48 lg:pb-24">
           akusztikus gitárok
         </h1>
       </div>
@@ -28,13 +29,7 @@ const page = () => {
       <div className="bg-[#F7F7F7] py-3">
         <div className="width flex justify-between">
           <div>
-            <Link
-              href="/"
-              className="flex gap-2 items-center bg-white text-[#333333] border-2 border-solid border-[#D6D6D6] py-1.5 px-5 font-bold text-xs tracking-wider uppercase rounded"
-            >
-              Legújabbak előre{" "}
-              <MdKeyboardArrowDown className="text-black text-2xl" />
-            </Link>
+          <OrderDropdown option2="Option 2" option3="Option 3" option4="Option 4" option5="Option 5"/>
           </div>
 
           <div className="flex items-center gap-16">
@@ -66,12 +61,6 @@ const page = () => {
         {/* --TABS-- */}
         <Tabs gridView={gridView} />
 
-        <Link
-          href="/"
-          className={`${styles.bttn_width} hidden md:block w-full mt-8`}
-        >
-          <Button text="összes hangszer" icon={<BsArrowRightShort />} />
-        </Link>
 
         <Link href="/" className="mt-3">
           <button className="bttn">

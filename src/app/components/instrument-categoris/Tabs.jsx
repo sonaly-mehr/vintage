@@ -55,13 +55,13 @@ const Tabs = ({ gridView }) => {
 
   return (
     <Tab.Group>
-      <Tab.List className="flex flex-wrap md:flex-nowrap gap-4 md:gap-6 p-1 relative top-[-240px] md:top-[-130px]">
+      <Tab.List className="flex flex-wrap md:flex-wrap lg:flex-nowrap gap-4 md:gap-6 p-1 relative top-[-300px] md:top-[-250px] lg:top-[-130px]">
         {Object.keys(categories).map((category) => (
           <Tab
             key={category}
             className={({ selected }) =>
               classNames(
-                "w-fit md:w-full rounded px-3 md:px-0 py-2 text-xs font-bold leading-5 text-[#333333] uppercase",
+                "w-fit md:w-fit lg:w-fit rounded px-3 py-2 text-xs font-bold leading-5 text-[#333333] uppercase",
                 selected
                   ? "border-[3px] border-solid border-black"
                   : "border-[3px] border-solid border-[#CCCCCC]"

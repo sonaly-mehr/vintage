@@ -10,11 +10,11 @@ import img7 from "../../assets/Rectangle 223.jpg";
 
 const page = () => {
   return (
-    <div className="width py-10 md:py-16">
+    <div className="width py-16">
       <h1 className="heading mb-8">rólunk</h1>
 
-      <div className="md:w-3/5 m-auto flex flex-col gap-6 md:gap-10">
-        <Image src={img1} alt="" className="" priority />
+      <Image src={img1} alt="" className="w-full mb-5 md:mb-10 " priority/>
+      <div className="md:w-3/5 m-auto flex flex-col gap-5 md:gap-10">
         <p className="body3">
           Műhelyünkben, sokak megelégedésére, immár másfél évtizede változatlan
           lelkesedéssel folyik a hangszerészmunka. Profilunk főként gitár, de
@@ -24,7 +24,7 @@ const page = () => {
           minőségben, és rövid határidővel állunk rendelkezésedre.
         </p>
 
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-3 md:gap-5">
           <div className="">
             <Image src={img2} alt="" className="w-full" priority />
           </div>

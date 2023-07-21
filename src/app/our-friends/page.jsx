@@ -3,6 +3,7 @@ import React from "react";
 import friend from "../../assets/friend1.jpg";
 import Image from "next/image";
 import PaginationButtons from "../components/pagination/PaginationButtons";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const page = () => {
   const friends = [
@@ -92,9 +93,27 @@ const page = () => {
       <div className="flex justify-center mb-5">
         <PaginationButtons />
       </div>
-      <div className="flex flex-col gap-5 md:flex-row flex-wrap flex-none overflow-auto">
+
+      <div className="p-5">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}>
+          <Masonry gutter="20px">
+            {friends.map((friend) => (
+              <div className="border-b-[1px] border-solid border-[#B1B1B1] pb-5 md:pb-8 h-fit mb-6">
+                <Image src={friend.img} alt="" priority className="w-full" />
+                <p className="body3 mt-2 h-full md:py-0">
+                  <span className="font-semibold text-primary">
+                    {friend.boldDescp}
+                  </span>{" "}
+                  {friend.descp}
+                </p>
+              </div>
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
+      {/* <div className="grid grid-cols-4 gap-5">
         {friends.map((friend) => (
-          <div className="basis-[23%] border-b-[1px] border-solid border-[#B1B1B1] pb-4 md:pb-10 h-fit">
+          <div className="border-b-[1px] border-solid border-[#B1B1B1] pb-4 md:pb-10 h-fit">
             <Image src={friend.img} alt="" priority className="w-full" />
             <p className="body3 mt-2 h-full py-3 md:py-0">
               <span className="font-semibold text-primary">
@@ -104,7 +123,7 @@ const page = () => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
       <div className="flex justify-center mt-3 mb-5">
         <PaginationButtons />
       </div>

@@ -13,7 +13,7 @@ const page = () => {
   return (
     <div className="width pb-12">
       <BreadCrumbs breadCrumbs={breadCrumbs} />
-      <div className="flex flex-col-reverse md:flex-row gap-10 md:gap-28 justify-between mt-5">
+      <div className="flex flex-col-reverse md:flex-col-reverse lg:flex-col-reverse xl:flex-row gap-10 md:gap-28 justify-between mt-5">
         <div>
           <div className="mb-7 md:mb-12">
             <h1 className="heading md:text-[#202020]">applause by ovation</h1>

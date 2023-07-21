@@ -7,7 +7,25 @@
   background: url("../../assets/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+}
+.sub__menu ul {
+  transform: translatex(100%) scale(0);
+}
+.sub__menu:hover ul {
+  transform: translatex(101%) scale(1);
+}
+.sub__menu:hover > {
+  transform: rotate(-270deg);
+}
+.order__dropdown{
+  width: 225px;
+  font-size: 12px !important;
+  height: 45px;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right;
+  background-color: #fff;
+    background-position-x: right;
+  -webkit-appearance: none;
+  background-position-x: 180px;
 }
 .red_bg_opacity {
   background: rgba(212, 4, 4, 0.8);
@@ -24,91 +42,93 @@
   background-size: cover;
   background-position: center;
 }
-.bttn_width button{
+.bttn_width button {
   width: 100% !important;
   display: flex;
   justify-content: center;
 }
-.usedInstrument1{
-  background: url('../../assets/used-instrument1.svg');
+.usedInstrument1 {
+  background: url("../../assets/used-instrument1.svg");
 }
-.usedInstrument2{
-  background: url('../../assets/used-instrument2.svg');
+.usedInstrument2 {
+  background: url("../../assets/used-instrument2.svg");
 }
-.usedInstrument3{
-  background: url('../../assets/used-instrument3.svg');
+.usedInstrument3 {
+  background: url("../../assets/used-instrument3.svg");
 }
-.usedInstrument4{
-  background: url('../../assets/used-instrument4.svg');
+.usedInstrument4 {
+  background: url("../../assets/used-instrument4.svg");
 }
-.usedInstrument5{
-  background: url('../../assets/used-instrument5.svg');
+.usedInstrument5 {
+  background: url("../../assets/used-instrument5.svg");
 }
-.usedInstrument6{
-  background: url('../../assets/used-instrument6.svg');
+.usedInstrument6 {
+  background: url("../../assets/used-instrument6.svg");
 }
-.usedInstrument7{
-  background: url('../../assets/used-instrument7.svg');
+.usedInstrument7 {
+  background: url("../../assets/used-instrument7.svg");
 }
-.usedInstrument8{
-  background: url('../../assets/used-instrument8.svg');
+.usedInstrument8 {
+  background: url("../../assets/used-instrument8.svg");
 }
-.usedInstrument9{
-  background: url('../../assets/used-instrument9.svg');
+.usedInstrument9 {
+  background: url("../../assets/used-instrument9.svg");
 }
-.usedInstrument10{
-  background: url('../../assets/used-instrument10.svg');
+.usedInstrument10 {
+  background: url("../../assets/used-instrument10.svg");
 }
-.usedInstrument11{
-  background: url('../../assets/used-instrument11.svg');
+.usedInstrument11 {
+  background: url("../../assets/used-instrument11.svg");
 }
-.usedInstrument12{
-  background: url('../../assets/used-instrument12.svg');
+.usedInstrument12 {
+  background: url("../../assets/used-instrument12.svg");
 }
-.usedInstrument13{
-  background: url('../../assets/used-instrument13.svg');
+.usedInstrument13 {
+  background: url("../../assets/used-instrument13.svg");
 }
-.usedInstrument14{
-  background: url('../../assets/used-instrument14.svg');
+.usedInstrument14 {
+  background: url("../../assets/used-instrument14.svg");
 }
-.usedInstrument15{
-  background: url('../../assets/used-instrument15.svg');
+.usedInstrument15 {
+  background: url("../../assets/used-instrument15.svg");
 }
-.newInstrument1{
-  background: url('../../assets/new-instrument1.svg');
+.newInstrument1 {
+  background: url("../../assets/new-instrument1.svg");
 }
-.newInstrument2{
-  background: url('../../assets/new-instrument2.svg');
+.newInstrument2 {
+  background: url("../../assets/new-instrument2.svg");
 }
-.newInstrument3{
-  background: url('../../assets/new-instrument3.svg');
+.newInstrument3 {
+  background: url("../../assets/new-instrument3.svg");
 }
-.newInstrument4{
-  background: url('../../assets/new-instrument4.svg');
+.newInstrument4 {
+  background: url("../../assets/new-instrument4.svg");
 }
-.newInstrument5{
-  background: url('../../assets/new-instrument5.svg');
+.newInstrument5 {
+  background: url("../../assets/new-instrument5.svg");
 }
-.newInstrument6{
-  background: url('../../assets/new-instrument6.svg');
+.newInstrument6 {
+  background: url("../../assets/new-instrument6.svg");
 }
-.newInstrument7{
-  background: url('../../assets/new-instrument7.svg');
+.newInstrument7 {
+  background: url("../../assets/new-instrument7.svg");
 }
-.newInstrument8{
-  background: url('../../assets/new-instrument8.svg');
+.newInstrument8 {
+  background: url("../../assets/new-instrument8.svg");
 }
 
-.usedInstrument, .newInstrument{
+.usedInstrument,
+.newInstrument {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-
 @media screen and (max-width: 768px) {
   .footer__bg {
     background: url("../../assets/responsive-footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .header__bg {
     background: url("../../assets/responsive-nav-bg.jpg");
