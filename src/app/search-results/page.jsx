@@ -33,7 +33,7 @@ const page = () => {
       <div className="bg-[#F7F7F7] py-3">
         <div className="width flex justify-between">
           <div>
-          <OrderDropdown option2="Option 2" option3="Option 3" option4="Option 4" option5="Option 5"/>
+          <OrderDropdown/>
           </div>
 
           <div className="flex items-center gap-16">

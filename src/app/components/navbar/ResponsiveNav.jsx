@@ -12,9 +12,7 @@ import információkNavLinks from "../../data/információkNavLinks.json";
 
 const ResponsiveNav = ({ nav, handleNav }) => {
   const pathname = usePathname();
-  const [használtLinks, setHasználtLinks] = useState(
-    használtNavLinks.slice(0, 6)
-  );
+  const [használtLinks, setHasználtLinks] = useState(használtNavLinks);
   const [információkLinks, setInformációkLinks] = useState(információkNavLinks);
 
   const [navbarOpen, setNavbarOpen] = useState(true);
@@ -27,17 +25,19 @@ const ResponsiveNav = ({ nav, handleNav }) => {
   };
 
   return (
-    <div className="relative z-40">
+    <div className="absolute z-40 w-full">
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav
+            ? "md:hidden absolute left-[-24px] top-[-103px] w-full h-[185vh] bg-black/70"
+            : ""
         }
       >
         {/* Side Drawer Menu */}
         <div
           className={
             nav
-              ? " fixed left-0 top-0 w-[80%] sm:w-[60%] md:w-[45%] h-screen bg-[#232323] px-8 py-10 ease-in duration-500"
+              ? " absolute left-0 top-0 w-full h-[185vh] bg-[#232323] px-8 py-10 ease-in duration-500"
               : "fixed left-[-100%] top-0 px-6 py-10 ease-in duration-500 h-screen"
           }
         >
@@ -110,10 +110,7 @@ const ResponsiveNav = ({ nav, handleNav }) => {
               {használtSubMenu && (
                 <div className="">
                   <ul className="flex flex-col justify-center gap-3 mt-5">
-                    <li
-                      onClick={toggelNavbar}
-                      className="w-full"
-                    >
+                    <li onClick={toggelNavbar} className="w-full">
                       <div className="">
                         <button
                           onClick={() => {
@@ -161,7 +158,10 @@ const ResponsiveNav = ({ nav, handleNav }) => {
                       {showHasználtChildMenu && (
                         <ul className="ml-8 space-y-1 py-1">
                           {használtLinks.map((menu) => (
-                            <li onClick={toggelNavbar} className="border-b-[1px] border-solid border-[#4F4F4F] li-border">
+                            <li
+                              onClick={toggelNavbar}
+                              className="border-b-[1px] border-solid border-[#4F4F4F] li-border"
+                            >
                               <Link
                                 href={`${menu.link && menu.link}`}
                                 onClick={() => setNav(false)}
@@ -177,7 +177,7 @@ const ResponsiveNav = ({ nav, handleNav }) => {
                     </li>
 
                     <li
-                      className="font-bold text-base uppercase tracking-wider pl-5"
+                      className="font-bold text-base uppercase tracking-wider pl-5 pb-4 border-b-[1px] border-solid border-[#4F4F4F]"
                       onClick={toggelNavbar}
                     >
                       <Link href="/instrument-categoris">új</Link>
@@ -187,14 +187,14 @@ const ResponsiveNav = ({ nav, handleNav }) => {
               )}
             </li>
 
-            <li className="pb-4 border-b-[1px] border-solid border-[#4F4F4F] w-full">
+            <li className=" w-full">
               <button
                 onClick={() => {
                   setInfoSubMenu(!infoSubMenu);
                 }}
                 className="w-full"
               >
-                <div className="w-full font-bold text-base uppercase tracking-wider flex items-center justify-between">
+                <div className="w-full font-bold text-base uppercase tracking-wider flex items-center justify-between pb-4 border-b-[1px] border-solid border-[#4F4F4F]">
                   információk
                   {!infoSubMenu ? (
                     <svg
@@ -253,7 +253,7 @@ const ResponsiveNav = ({ nav, handleNav }) => {
 
             <li className="font-bold text-base uppercase tracking-wider">
               <Link href="/detailed-search" onClick={() => setNav(false)}>
-              részletes kereső
+                részletes kereső
               </Link>
             </li>
           </ul>
