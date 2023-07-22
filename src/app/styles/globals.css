@@ -20,6 +20,12 @@ li{
 .li-border:last-child{
   border-bottom:0px !important
 }
+.scrollbar-direction{
+  direction: rtl;
+}
+.scrollbar-direction li{
+  direction: ltr;
+}
 .heading {
   @apply font-bold text-xl md:text-[19px] leading-[30px] text-black md:text-[#202020] tracking-wider uppercase;
 }

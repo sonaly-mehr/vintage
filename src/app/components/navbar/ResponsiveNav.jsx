@@ -25,11 +25,11 @@ const ResponsiveNav = ({ nav, handleNav }) => {
   };
 
   return (
-    <div className="absolute z-40 w-full">
+    <div className="relative z-40 w-full">
       <div
         className={
           nav
-            ? "md:hidden absolute left-[-24px] top-[-103px] w-full h-[185vh] bg-black/70"
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 overflow-y-scroll"
             : ""
         }
       >
@@ -37,7 +37,7 @@ const ResponsiveNav = ({ nav, handleNav }) => {
         <div
           className={
             nav
-              ? " absolute left-0 top-0 w-full h-[185vh] bg-[#232323] px-8 py-10 ease-in duration-500"
+              ? " fixed left-0 top-0 w-full h-screen bg-[#232323] px-8 py-10 ease-in duration-500 overflow-y-scroll"
               : "fixed left-[-100%] top-0 px-6 py-10 ease-in duration-500 h-screen"
           }
         >
@@ -156,11 +156,11 @@ const ResponsiveNav = ({ nav, handleNav }) => {
                       </div>
 
                       {showHasználtChildMenu && (
-                        <ul className="ml-8 space-y-1 py-1">
+                        <ul className=" space-y-1 py-1 h-[270px] overflow-y-scroll scrollbar-direction">
                           {használtLinks.map((menu) => (
                             <li
                               onClick={toggelNavbar}
-                              className="border-b-[1px] border-solid border-[#4F4F4F] li-border"
+                              className="ml-8 border-b-[1px] border-solid border-[#4F4F4F] li-border"
                             >
                               <Link
                                 href={`${menu.link && menu.link}`}
