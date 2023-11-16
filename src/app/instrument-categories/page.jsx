@@ -2,14 +2,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Button from "../components/Button";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsGrid, BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 import { AiOutlineUnorderedList } from "react-icons/ai";
-import styles from "../styles/index.module.css";
-import PaginationButtons from "../components/pagination/PaginationButtons";
 import BreadCrumbs from "../components/BreadCrumbs";
 import breadCrumbsData from "../data/breadCrumbs";
-import Tabs from "../components/instrument-categoris/Tabs";
+import Tabs from "../components/instrument-categories/Tabs";
 import OrderDropdown from "../components/OrderDropdown";
 
 const page = () => {
@@ -29,7 +26,7 @@ const page = () => {
       <div className="bg-[#F7F7F7] py-3">
         <div className="width flex justify-between">
           <div>
-          <OrderDropdown/>
+            <OrderDropdown />
           </div>
 
           <div className="flex items-center gap-16">
@@ -60,7 +57,6 @@ const page = () => {
       <div className="width pb-8 md:pb-16">
         {/* --TABS-- */}
         <Tabs gridView={gridView} />
-
 
         <Link href="/" className="mt-3">
           <button className="bttn">

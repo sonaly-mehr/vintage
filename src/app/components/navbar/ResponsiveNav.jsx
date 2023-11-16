@@ -180,7 +180,7 @@ const ResponsiveNav = ({ nav, handleNav }) => {
                       className="font-bold text-base uppercase tracking-wider pl-5 pb-4 border-b-[1px] border-solid border-[#4F4F4F]"
                       onClick={toggelNavbar}
                     >
-                      <Link href="/instrument-categoris">új</Link>
+                      <Link href="/instrument-categories">új</Link>
                     </li>
                   </ul>
                 </div>

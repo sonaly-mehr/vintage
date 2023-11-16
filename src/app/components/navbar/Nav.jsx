@@ -10,7 +10,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import ResponsiveNav from "./ResponsiveNav";
 import használtNavLinks from "../../data/használtNavLinks.json";
 import információkNavLinks from "../../data/információkNavLinks.json";
-import styles from '../../styles/index.module.css'
+import styles from "../../styles/index.module.css";
 
 const Nav = () => {
   const [nav, setNav] = useState(false);
@@ -38,8 +38,8 @@ const Nav = () => {
           </li>
           <li
             className={`${
-              pathname === "/instrument-categoris" ||
-              pathname === "/product-categoris" ||
+              pathname === "/instrument-categories" ||
+              pathname === "/product-categories" ||
               pathname === "/product-details" ||
               pathname === "/view-product" ||
               pathname === "/reservation" ||
@@ -75,7 +75,7 @@ const Nav = () => {
                     <div className={`relative ${styles.sub__menu}`}>
                       <Menu.Item as="div">
                         {({ active }) => (
-                          <Link href="/instrument-categoris">
+                          <Link href="/instrument-categories">
                             <button
                               className={`${
                                 active
@@ -112,7 +112,7 @@ const Nav = () => {
 
                     <Menu.Item as="div">
                       {({ active }) => (
-                        <Link href="/instrument-categoris">
+                        <Link href="/instrument-categories">
                           <button
                             className={`${
                               active
